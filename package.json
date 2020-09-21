@@ -1,0 +1,74 @@
+{
+  "name": "nexus-plugin-validation",
+  "description": "@nexus/schema plugin to ease arguments validation with customized logic and type validation",
+  "version": "0.0.0-semantic-release",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -d",
+    "coverage": "codecov",
+    "clean": "rm -rf dist",
+    "release": "semantic-release",
+    "test": "yarn test:jest && yarn test:types && yarn test:lint",
+    "test:jest": "NODE_ENV=test jest",
+    "test:types": "tsc --noEmit",
+    "test:lint": "eslint --ext .ts,.js src/"
+  },
+  "devDependencies": {
+    "@nexus/schema": "^0.15.0",
+    "@prisma/client": "2.6.2",
+    "@types/jest": "26.0.14",
+    "@types/node": "13.13.21",
+    "@typescript-eslint/eslint-plugin": "3.10.1",
+    "@typescript-eslint/parser": "3.10.1",
+    "apollo-server": "^2.17.0",
+    "apollo-server-testing": "2.17.0",
+    "codecov": "3.7.2",
+    "coveralls": "3.1.0",
+    "eslint": "7.9.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-import-resolver-typescript": "2.3.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jest": "23.20.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-simple-import-sort": "5.0.3",
+    "graphql": "14.7.0",
+    "graphql-tools": "6.2.2",
+    "jest": "26.4.2",
+    "jest-mock-extended": "1.0.10",
+    "prettier": "2.1.2",
+    
+    "semantic-release": "17.1.2",
+    "ts-jest": "26.3.0",
+    "ts-node": "8.10.2",
+    "ts-node-dev": "1.0.0-pre.62",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "@nexus/schema": "^0.14.0 || ^0.15.0",
+    "graphql": "^15.3.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "release": {
+    "branch": "master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filoscoder/nexus-plugin-validation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/filoscoder/nexus-plugin-validation/issues"
+  },
+  "homepage": "https://github.com/filoscoder/nexus-plugin-validation",
+  "keywords": [
+    "nexus",
+    "schema",
+    "graphql",
+    "arguments",
+    "validation"
+  ],
+  "author": "filoscoder <sondaniel.88@gmail.com>",
+  "license": "MIT"
+  
+}
